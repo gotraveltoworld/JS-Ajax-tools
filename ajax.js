@@ -1,7 +1,7 @@
 /*
  *    @Description: The function define http ajax connection method.
  *    @version : 2.0
- *    @Author  : T.H. Lin
+ *    @Author  : traveler
  *    @Date    : 2016/01/20 11:56
  */
 function ajax(option) {
