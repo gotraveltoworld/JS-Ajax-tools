@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" 
+    content="width=device-width, initial-scale=1.0, 
+    user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="author" content="" />
+    <script src = "ajax.js"></script>
+ </head>
+ <body>
+   <div id = "res"></div>
+ </body>
+</html>
+<script>
+ajax({
+    url : "",//Set your target url link.
+    method : "get",//Set http method(default method is 'get').
+    debugAdv : true,//Show advanced debug model.
+    success : function(res) {
+        document.getElementById("res").innerHTML = res;
+    }
+});
+</script>
