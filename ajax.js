@@ -1,6 +1,5 @@
 /*
  *    @Description: The function define http ajax connection method.
- *    @version : 2.0
  *    @Author  : traveler
  *    @Date    : 2016/01/20 11:56
  */
@@ -9,15 +8,15 @@ function ajax(option) {
     if(typeof option === "undefined" || 
               option ==  null        ||
               option ==  ""          ){
-        console.log("No set request url");
+        console.log("Not set requirement option");
         return false;
     }//fi
     //Set default option.
     var debugNor = option.debugNor || false; //Normal debug information.
     var debugAdv = option.debugAdv || false; //Advantage debug information.
     var setting = {
-        url          : option.url,//Request.
-        method       : option.method      || "POST"        ,
+        url          : option.url,//Requirement.
+        method       : option.method      || "GET"        ,//Default method
         headerType   : option.headerType  || "Content-Type",
         headerFormat : option.headerFormat||
                            "application/x-www-form-urlencoded; charset=UTF-8",
@@ -127,7 +126,7 @@ function ajax(option) {
                 function(key) {
                     res += key + "=" + data[key];
                     if (num > 0 && index < (num - 1)) {
-                        res = res + "&&";
+                        res = res + "&";
                     }//fi 
                     index += 1;
                  }//endfunction
